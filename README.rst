@@ -14,15 +14,15 @@ Installation for development
     git config --global user.name 'Firstname Lastname'
     git config --global user.email 'youremail@youremail_domain.com'
 
-#. Fork upstream repository git@github.com:findbyanswers/startbootstrap-one-page-wonder.git
+#. Fork upstream repository git@github.com:findbyanswers/findbyanswers_website.git
 #. Clone repository::
 
     git clone <address of forked repository>
 
 #. Add upstream::
 
-    cd startbootstrap-one-page-wonder
-    git remote add upstream git@github.com:findbyanswers/startbootstrap-one-page-wonder.git
+    cd findbyanswers_website
+    git remote add upstream git@github.com:findbyanswers/findbyanswers_website.git
     git fetch upstream
 
 #. Install prerequisites::
@@ -49,7 +49,8 @@ Installation for development
 
 #. Create symlink to site configuration file::
 
-    ln -s $PWD/local/nginx.conf /etc/nginx/sites-enabled/findbyanswers.conf
+    sudo ln -s $PWD/local/nginx.conf /etc/nginx/sites-available/findbyanswers.conf
+    sudo ln -s /etc/nginx/sites-available/findbyanswers.conf /etc/nginx/sites-enabled/findbyanswers.conf
 
 #. Reload nginx configuration::
 
